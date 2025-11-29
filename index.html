@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav container">
+        <nav class="nav">
             <a href="#" class="logo">MV</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -40,12 +41,11 @@
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
+            <div class="status-bar">
+                <div class="status-dot"></div>
+                <p class="status-text">Currently exploring: <span class="status-highlight">Coding Agents</span></p>
+            </div>
         </section>
-
-        <div class="status-bar">
-            <div class="status-dot"></div>
-            <p class="status-text">Currently exploring: <span class="status-highlight">Coding Agents</span></p>
-        </div>
 
         <section id="about" class="about section">
             <div class="container">
@@ -121,48 +121,78 @@
 
         <section id="projects" class="projects section">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title">Latest Projects</h2>
                 <div class="projects-grid">
                     <!-- Project Card 1 -->
                     <article class="project-card">
-                        <div class="project-image">
-                            <!-- Placeholder for project image -->
-                            <div class="placeholder-img"></div>
-                        </div>
                         <div class="project-info">
-                            <h3 class="project-title">Project One</h3>
-                            <p class="project-desc">A brief description of the project and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" class="link">Demo</a>
-                                <a href="#" class="link">Code</a>
+                            <div class="project-header">
+                                <h3 class="project-title">Crypto Price Aggregator</h3>
+                                <a href="https://github.com/migvas/crypto-aggregator" class="project-link-icon"
+                                    aria-label="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="project-desc">A FastAPI-based cryptocurrency price aggregation service that
+                                fetches real-time price data from multiple providers and returns normalized, averaged
+                                results.</p>
+                            <div class="project-tags">
+                                <span class="project-tag tag-python"><i class="devicon-python-plain"></i> Python</span>
+                                <span class="project-tag tag-fastapi"><i class="devicon-fastapi-plain"></i>
+                                    FastAPI</span>
                             </div>
                         </div>
                     </article>
                     <!-- Project Card 2 -->
                     <article class="project-card">
-                        <div class="project-image">
-                            <div class="placeholder-img"></div>
-                        </div>
                         <div class="project-info">
-                            <h3 class="project-title">Project Two</h3>
-                            <p class="project-desc">A brief description of the project and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" class="link">Demo</a>
-                                <a href="#" class="link">Code</a>
+                            <div class="project-header">
+                                <h3 class="project-title">Miney - Expense Tracker</h3>
+                                <a href="https://github.com/migvas/miney-expense-tracker" class="project-link-icon"
+                                    aria-label="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="project-desc">A Flutter expense tracking app for Android that allows users to
+                                track expenses with categories, view analytics, and manage expense types.</p>
+                            <div class="project-tags">
+                                <span class="project-tag tag-flutter"><i class="devicon-flutter-plain"></i>
+                                    Flutter</span>
+                                <span class="project-tag tag-dart"><i class="devicon-dart-plain"></i> Dart</span>
+                                <span class="project-tag tag-vibe">Vibe Coding</span>
                             </div>
                         </div>
                     </article>
                     <!-- Project Card 3 -->
                     <article class="project-card">
-                        <div class="project-image">
-                            <div class="placeholder-img"></div>
-                        </div>
                         <div class="project-info">
-                            <h3 class="project-title">Project Three</h3>
-                            <p class="project-desc">A brief description of the project and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" class="link">Demo</a>
-                                <a href="#" class="link">Code</a>
+                            <div class="project-header">
+                                <h3 class="project-title">Go Tasks API</h3>
+                                <a href="https://github.com/migvas/go-tasks-api" class="project-link-icon"
+                                    aria-label="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="project-desc">A Go API designed to manage tasks. Currently in early development
+                                stages as a learning project to explore Go programming.</p>
+                            <div class="project-tags">
+                                <span class="project-tag tag-go"><i class="devicon-go-original-wordmark"></i> Go</span>
+                                <span class="project-tag tag-api">REST API</span>
                             </div>
                         </div>
                     </article>
