@@ -278,8 +278,19 @@ body {
     gap: 0.35rem;
 }
 
-.project-tag i {
+.project-tag i,
+.icon-langchain {
     font-size: 0.9rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    display: inline-block;
+}
+
+.icon-langchain {
+    background-image: url('../assets/langchain.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 /* Tag Colors */
