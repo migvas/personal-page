@@ -772,7 +772,8 @@ body {
 
     .status-text {
         font-size: 0.85rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
     }
 }
