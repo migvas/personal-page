@@ -94,11 +94,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Theme toggle (optional simple implementation)
+    // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
+    const root = document.documentElement;
+
+    const applyTheme = (theme) => {
+        root.setAttribute('data-theme', theme);
+        themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+        themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    };
+
     themeToggle.addEventListener('click', () => {
-        // This is a placeholder for theme switching logic
-        // For now, we'll just log it or maybe toggle a class if we had a light theme
-        console.log('Theme toggle clicked');
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
     });
+
+    applyTheme(root.getAttribute('data-theme') || 'dark');
 });
