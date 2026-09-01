@@ -116,15 +116,21 @@ body {
 .theme-toggle {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor: pointer;
     padding: 0.5rem;
     grid-column: 3;
     justify-self: end;
 }
 
+.theme-toggle .icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
 .theme-toggle:hover {
-    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .theme-toggle .icon-moon {
