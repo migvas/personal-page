@@ -539,8 +539,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
     z-index: 1;
-    /* Animation properties */
-    opacity: 0;
     transition: all 0.8s ease-out;
 }
 
@@ -592,13 +590,15 @@ body {
     display: block;
 }
 
-/* Animation Classes targeting content */
-.left .timeline-content {
+/* Animation initial states applied via JS-added classes so content stays visible without JS */
+.slide-in-left .timeline-content {
     transform: translateX(-50px);
+    opacity: 0;
 }
 
-.right .timeline-content {
+.slide-in-right .timeline-content {
     transform: translateX(50px);
+    opacity: 0;
 }
 
 .slide-in-left.show .timeline-content {
@@ -652,11 +652,10 @@ body {
         left: 0%;
     }
 
-    .left .timeline-content,
-    .right .timeline-content {
-        transform: translateX(0);
-        opacity: 0;
+    .slide-in-left .timeline-content,
+    .slide-in-right .timeline-content {
         transform: translateY(20px);
+        opacity: 0;
     }
 
     .slide-in-left.show .timeline-content,
